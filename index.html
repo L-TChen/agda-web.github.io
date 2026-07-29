@@ -18,7 +18,7 @@
       box-sizing: border-box;
       line-height: 1.5;
       min-width: 200px;
-      max-width: 80ex;
+      max-width: 96ex;
       padding: 45px;
       margin-top: 56px;
       margin-left: auto;
@@ -32,12 +32,43 @@
 
   <p>A stub page for the <a href="https://github.com/agda-web">Agda Web</a> project. Our aim is to be able to run an interactive session of Agda the proof assistant in a browser, powered by GHC's <a href="https://gitlab.haskell.org/haskell-wasm/ghc-wasm-meta">WebAssembly backend</a>.</p>
 
-  <p>Useful links:</p>
+  <h2 id="plfa">Demo: type-checking PLFA in VS Code for the Web</h2>
+
+  <video controls style="width: 100%">
+    <source src="media/demo-plfa.mp4" type="video/mp4">
+  </video>
+
+  <p>You can try out the WebAssembly build of Agda Language Server with <a href="https://github.dev/plfa/plfa.github.io">PLFA</a> in VS Code. Our <a href="https://github.com/agda-web/plfa.github.io">fork</a> includes basic configurations to facilitate downloading the minimal set of extensions. Self-hosted version is work in progress.</p>
+
+  <p>Steps:</p>
+
+  <ol>
+    <li>Pick either of the instances:
+      <ul>
+        <li><a href="https://vscode.dev/github/agda-web/plfa.github.io">VS Code for the Web</a> (as shown in video)</li>
+        <li><a href="https://github.dev/agda-web/plfa.github.io">github.dev</a></li>
+      </ul>
+    </li>
+    <li>(0:14) Open the Extensions tab and check if all recommended extensions are installed and enabled.</li>
+    <li>(0:33) Run the command <strong>Git Submodule Cloner: Initialize and checkout submodules</strong>. This fetches the source of standard library into your browser and is persisted across reload.</li>
+    <li>(0:50) Open a file in <code>src/</code> and load it with keyboard shortcut <kbd>ctrl</kbd>-<kbd>c</kbd> <kbd>ctrl</kbd>-<kbd>l</kbd>.</li>
+  </ol>
+
+  <h2>Implementations</h2>
+
+  <p>We are working on integrating WebAssembly build of Agda in a variety of IDE/editors:</p>
 
   <ul>
-    <li>An experimental <a href="https://agda-web.github.io/als-demo/">PoC on Agda Language Server</a>.
+    <li>VS Code (desktop/web): <a href="https://github.com/banacorn/agda-mode-vscode">agda-mode-vscode</a> by banacorn.</li>
+    <li>CodeMirror 6: In progress! An experimental <a href="https://agda-web.github.io/als-demo/">PoC on Agda Language Server</a> is available.</li>
+    <li>We are working on implementing Agda's interaction protocol on LSP to support all LSP-aware editors at once.</li>
+  </ul>
+
+  <h2>Other useful links</h2>
+
+  <ul>
     <li><a href="https://github.com/agda-web/agda-wasm-dist">Distributions</a> of Agda executable compiled into WebAssembly, for Agda version 2.6.4.3 through 2.8.0. It includes an alternative setup script, written in Python, to the GHC-WASM backend. See <a href="https://github.com/agda-web/agda">what patch looks like</a>.
-    <li>A <a href="https://github.com/agda-web/plfa.github.io">fork</a> of PLFA that can be evaluated in a browser page via <a href="https://vscode.dev/github/agda-web/plfa.github.io" rel="nofollow">vscode.dev</a> or <a href="https://github.dev/agda-web/plfa.github.io" rel="nofollow">github.dev</a>. Self-hosted version is work in progress.
-    <li>A <a href="https://agda-web.github.io/lsp-spec/">dark-theme-friendly version of LSP Spec</a> generated via Pandoc.
+    <li>The <a href="https://github.com/agda-web/agda-input">data file</a> for replicating Agda's <a href="https://agda.readthedocs.io/en/v2.8.0/tools/emacs-mode.html">Unicode input method</a> as seen in Emacs.
+    <li>A <a href="https://agda-web.github.io/lsp-spec/">dark-theme-friendly version of LSP Spec</a> generated via Pandoc. Tracking version 3.17.
   </ul>
 </div>
