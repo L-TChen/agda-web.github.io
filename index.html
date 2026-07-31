@@ -44,31 +44,32 @@
 
   <p>To use Agda with a GitHub repository (or any repository host supported by VS Code for the Web), follow the instructions below.</p>
   <ol>
-    <li>Start <strong>VS Code for the Web </strong> by
+    <li>To start <strong>VS Code for the Web</strong>, either
       <ul>
-        <li>visiting <a href="https://vscode.dev">VS Code for the Web</a>; </li>
-        <li>visiting any repository on GitHub such as the <a href="https://github.com/agda-web/plfa.github.io">PLFA fork</a> (as shown in video) and pressing <hkb>.</hkb></li>
+        <li>visit <a href="https://vscode.dev">VS Code for the Web</a>; </li>
+        <li>visit any repository on GitHub such as the <a href="https://github.com/agda-web/plfa.github.io">PLFA fork</a> (as shown in video) and pressing <hkb>.</hkb></li>
       </ul>
     </li>
-    <li>Open the <strong>Extensions</strong> tab and install:
+    <li>Open the <strong>Extensions</strong> <span class="codicon codicon-extensions" aria-hidden="true"></span> tab and install:
       <ol>
         <li><a href="https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode">agda-mode</a> by Ting-Gian LUA</li>
         <li><a href="https://marketplace.visualstudio.com/items?itemName=qbane.als-wasm-loader">Agda Language Server WASM Loader</a> by Andy Pan</li>
         <li><a href="https://marketplace.visualstudio.com/items?itemName=qbane.vscode-git-submodule-cloner">Submodule Cloner</a> by Andy Pan</li>
       </ol>
     </li>
-    <li>Run the commands <strong>ALS WASM Loader: Manager libraries...</strong> to fetch the standard/cubical library by
+    <li>To install the standard/cubical library, run the commands <strong>ALS WASM Loader: Manager libraries...</strong> by
       <ul>
         <li>selecting <strong>View/Command Palette... </strong>, or</li>
         <li>pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Windows/Linux (or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on macOS).</li>
       </ul>
       This step may take a while to finish.</li>
-    <li>(Optional) Open a GitHub repository by running the command: 
+    <li>(Optional) To open a GitHub repository, run the command: 
       <strong>Remote Repositories: Open Remmote Repository ...</strong>.</li>
-    <li>(Optional) Open the <strong>Extensions</strong> tab and <strong>trust</strong> the workspace by:
+    <li>(Optional) To <strong>trust</strong> the workspace, 
       <ol>
-        <li>Clicking the icon <span class="codicon codicon-shield" aria-hidden="true"></span></li>
-        <li>Clicking <strong>Trust</strong></li>
+        <li>open the <strong>Extensions</strong> <span class="codicon codicon-extensions" aria-hidden="true"></span> tab </li>
+        <li>click the icon <span class="codicon codicon-shield" aria-hidden="true"></span></li>
+        <li>click <strong>Trust</strong></li>
       </ol>
       For security reasons, this step may be required for the first time when you open a repository.
     <li>To type check <code>.agda</code> file, open any the file and run the command <strong>Agda: Load</strong> (or press <kbd>ctrl</kbd> + <kbd>c</kbd> <kbd>ctrl</kbd>+<kbd>l</kbd>).</li>
